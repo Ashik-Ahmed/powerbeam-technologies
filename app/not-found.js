@@ -1,2 +1,19 @@
 import Link from "next/link";
-export default function NotFound(){return <main className="min-h-[70vh] bg-ink-950 grid place-items-center text-center px-6"><div><p className="text-solar-500 font-bold tracking-widest">404</p><h1 className="font-display text-4xl md:text-6xl font-bold mt-2">Page Lost in the Dark</h1><p className="text-white/60 mt-4">Let’s bring you back to solar light.</p><Link href="/" className="btn-solar mt-8">Back Home</Link></div></main>;}
+export default function NotFound() {
+  return (
+    <main className="min-h-[70vh] bg-ink-950 grid place-items-center text-center px-6">
+      <div>
+        <p className="text-solar-500 font-bold tracking-widest">404</p>
+        <h1 className="font-display text-4xl md:text-6xl font-bold mt-2">
+          Page Lost in the Dark
+        </h1>
+        <p className="text-white/60 mt-4">
+          Let’s bring you back to solar light.
+        </p>
+        <Link href="/" className="btn-solar mt-8">
+          Back Home
+        </Link>
+      </div>
+    </main>
+  );
+}
