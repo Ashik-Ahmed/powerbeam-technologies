@@ -1,0 +1,19 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--solar:#FFB800;--volt:#00E676}
+*{scrollbar-width:thin;scrollbar-color:#FFB800 #071127}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#04070F}::-webkit-scrollbar-thumb{background:linear-gradient(#FFD60A,#FF7A18);border-radius:99px}
+::selection{background:#FFB800;color:#04070F}
+html{scroll-behavior:smooth}
+body{@apply bg-white text-slate-900 font-sans antialiased overflow-x-hidden}
+.font-display{font-family:var(--font-display)}
+.text-gradient{background:linear-gradient(92deg,#FFD60A,#FF7A18 60%,#FF5C00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.14)}
+.glass-dark{background:rgba(4,7,15,.6);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.1)}
+.btn-solar{@apply inline-flex items-center justify-center gap-2 font-bold rounded-full px-7 py-3.5 text-ink-950 bg-[linear-gradient(135deg,#FFD60A,#FF7A18)] shadow-glow hover:shadow-none hover:-translate-y-0.5 transition-all duration-300}
+.btn-ghost{@apply inline-flex items-center justify-center gap-2 font-semibold rounded-full px-7 py-3.5 border border-white/25 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300}
+.btn-dark{@apply inline-flex items-center justify-center gap-2 font-bold rounded-full px-7 py-3.5 bg-ink-900 text-white hover:bg-ink-800 transition-all}
+.card-hover{@apply transition-all duration-500 hover:-translate-y-2 hover:shadow-card}
+.grid-bg{background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px}
+.noise::after{content:"";position:absolute;inset:0;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+input,textarea,select{@apply outline-none focus:ring-2 focus:ring-solar-500/60 focus:border-solar-500}
