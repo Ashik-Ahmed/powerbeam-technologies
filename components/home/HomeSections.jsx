@@ -93,7 +93,7 @@ export function FeaturedProducts() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           eyebrow="Featured Products"
-          title="Crown Micro Solar Portfolio in Bangladesh"
+          title="Powerbeam Solar Portfolio in Bangladesh"
           desc="Hybrid, on-grid, ESS & pumps — filter by your needs. Best solar inverter price in Bangladesh with warranty."
         />
         <div className="flex flex-wrap justify-center gap-3 mb-10">

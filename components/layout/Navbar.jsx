@@ -50,10 +50,10 @@ export default function Navbar() {
               {CONTACT.email}
             </a>
           </span>
-          <span className="flex items-center gap-2">
+          {/* <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-volt-500 rounded-full animate-pulse" />
             Exclusive Crown Micro Partner • {CONTACT.hours}
-          </span>
+          </span> */}
         </div>
       </div>
 

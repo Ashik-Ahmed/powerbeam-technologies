@@ -44,7 +44,7 @@ export default function Hero() {
         className="max-w-7xl mx-auto px-6 relative w-full grid lg:grid-cols-[1.15fr_.85fr] gap-12 items-center"
       >
         <div>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 glass rounded-full pl-2 pr-4 py-1.5 text-xs font-semibold"
@@ -56,7 +56,7 @@ export default function Hero() {
             <span className="text-white/80">
               Crown Micro Global Bangladesh Partner
             </span>
-          </motion.div>
+          </motion.div> */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

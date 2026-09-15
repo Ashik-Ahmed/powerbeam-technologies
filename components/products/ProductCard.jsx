@@ -36,11 +36,11 @@ export default function ProductCard({ p, i = 0 }) {
         <p className="text-[11px] tracking-widest text-volt-400 font-bold">
           {p.categoryLabel} • {p.series}
         </p>
-        <h3 className="font-display text-xl font-bold mt-2 leading-snug group-hover:text-solar-400 transition">
+        <h3 className="font-display text-xl font-bold mt-2 leading-snug text-solar-400 transition">
           <Link href={`/products/${p.slug}`}>{p.name}</Link>
         </h3>
         <p className="text-sm text-white/55 mt-2 line-clamp-2">{p.tagline}</p>
-        <div className="flex gap-2 mt-4 text-[11px] font-semibold">
+        <div className="flex gap-2 mt-4 text-white/70 text-[11px] font-semibold">
           <span className="bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">
             {p.efficiency}
           </span>
@@ -51,7 +51,7 @@ export default function ProductCard({ p, i = 0 }) {
         <div className="flex gap-3 mt-5">
           <Link
             href={`/products/${p.slug}`}
-            className="flex-1 text-center text-sm font-bold bg-white/5 hover:bg-solar-gradient hover:text-ink-950 border border-white/10 rounded-full py-2.5 transition"
+            className="flex-1 text-white text-center text-sm font-bold bg-white/5 hover:bg-solar-gradient hover:text-ink-950 border border-white/10 rounded-full py-2.5 transition"
           >
             View Details
           </Link>
