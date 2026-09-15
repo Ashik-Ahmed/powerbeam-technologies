@@ -10,9 +10,3 @@ export async function POST(req) {
     return Response.json({ error: "Failed" }, { status: 500 });
   }
 }
-// app/api/partner/route.js — same pattern
-export async function POST(req) {
-  const b = await req.json();
-  console.log("PARTNER LEAD:", b);
-  return Response.json({ ok: true });
-}

@@ -28,7 +28,7 @@ export default function ProductCard({ p, i = 0 }) {
             {p.badge}
           </span>
         )}
-        <span className="absolute top-4 right-4 text-[11px] font-bold glass-dark px-3 py-1.5 rounded-full">
+        <span className="absolute top-4 right-4 text-gray-300 text-[11px] font-bold glass-dark px-3 py-1.5 rounded-full">
           {p.power}
         </span>
       </div>
