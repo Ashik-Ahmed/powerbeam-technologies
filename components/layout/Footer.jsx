@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { CONTACT } from "@/lib/constants";
 import { CATEGORIES } from "@/lib/products";
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#020409] border-t border-white/10 relative overflow-hidden">
@@ -19,10 +20,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3">
-              <span className="w-10 h-10 rounded-xl bg-solar-gradient grid place-items-center">
-                <Zap className="text-ink-950" fill="currentColor" />
-              </span>
-              <span className="font-display font-extrabold">POWERBEAM</span>
+              <Image
+                            src="/images/powerbeam-logo.png"
+                            alt="Powerbeam Logo"
+                            width={120}
+                            height={40}
+                            priority
+                          />
             </div>
             <p className="text-white/60 text-sm mt-4 leading-relaxed">
               Exclusive channel partner of Crown Micro Global Bangladesh Ltd.
@@ -121,7 +125,8 @@ export default function Footer() {
         </div>
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/40">
           <p>
-            © {new Date().getFullYear()} Powerbeam Technologies. All rights
+            © <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
+            Powerbeam Technologies. All rights
             reserved. | Solar Inverter Supplier in Bangladesh
           </p>
           <p>ISO 9001 • IEC 62109 • CE • IP66 • BSTI Aligned</p>

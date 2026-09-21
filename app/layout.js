@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
         <JsonLd data={orgSchema()} />
         <JsonLd data={localSchema()} />
       </head>
-      <body className="bg-ink-950 text-white font-sans">
+      <body suppressHydrationWarning className="bg-ink-950 text-white font-sans">
         <Navbar />
         {children}
         <Footer />

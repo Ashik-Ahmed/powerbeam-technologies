@@ -12,6 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { CONTACT, NAV } from "@/lib/constants";
 import { CATEGORIES } from "@/lib/products";
@@ -67,7 +68,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
-            <span className="w-11 h-11 rounded-2xl bg-solar-gradient grid place-items-center shadow-glow group-hover:rotate-12 transition-transform">
+            <Image
+              src="/images/powerbeam-logo.png"
+              alt="Powerbeam Logo"
+              width={120}
+              height={40}
+              priority
+            />
+            {/* <span className="w-11 h-11 rounded-2xl bg-solar-gradient grid place-items-center shadow-glow group-hover:rotate-12 transition-transform">
               <Zap className="text-ink-950" fill="currentColor" />
             </span>
             <span>
@@ -77,7 +85,7 @@ export default function Navbar() {
               <span className="text-[10px] tracking-[0.3em] text-solar-500 font-bold">
                 TECHNOLOGIES
               </span>
-            </span>
+            </span> */}
           </Link>
 
           <ul className="hidden lg:flex items-center gap-7 text-sm font-medium">
