@@ -52,10 +52,10 @@ export const metadata = {
       "Reliable Crown Micro solar inverters, ESS & batteries. Residential, commercial & industrial solutions.",
     images: [
       {
-        url: `${SITE_URL}/og.jpg`,
+        url: `${SITE_URL}/social-preview.svg`,
         width: 1200,
         height: 630,
-        alt: "Powerbeam Solar Bangladesh",
+        alt: "Powerbeam Technologies social preview",
       },
     ],
   },
@@ -63,6 +63,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Powerbeam Technologies Bangladesh",
     description: "Exclusive Crown Micro partner — solar inverters & batteries.",
+    images: [`${SITE_URL}/social-preview.svg`],
   },
   verification: { google: "google-site-verification-code" },
   category: "Solar Energy",
