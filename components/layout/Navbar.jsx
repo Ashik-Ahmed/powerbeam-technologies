@@ -1,22 +1,14 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import {
-  ArrowRight,
-  ChevronDown,
-  Mail,
-  Menu,
-  Phone,
-  X,
-  Zap,
-} from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight, ChevronDown, Mail, Menu, Phone, X, Zap } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { CONTACT, NAV } from "@/lib/constants";
-import { CATEGORIES } from "@/lib/products";
-import { cn } from "@/lib/utils";
+import { CONTACT, NAV } from '@/lib/constants';
+import { CATEGORIES } from '@/lib/products';
+import { cn } from '@/lib/utils';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,9 +18,9 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -60,19 +52,19 @@ export default function Navbar() {
 
       <nav
         className={cn(
-          "transition-all duration-500",
+          'transition-all duration-500',
           scrolled
-            ? "bg-ink-950/90 backdrop-blur-xl border-b border-white/10 shadow-card"
-            : "bg-transparent",
+            ? 'bg-ink-950/90 backdrop-blur-xl border-b border-white/10 shadow-card'
+            : 'bg-transparent'
         )}
       >
         <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/images/powerbeam-logo.png"
+              src="/images/powerbeam-logo.svg"
               alt="Powerbeam Logo"
-              width={120}
-              height={40}
+              width={150}
+              height={60}
               priority
             />
             {/* <span className="w-11 h-11 rounded-2xl bg-solar-gradient grid place-items-center shadow-glow group-hover:rotate-12 transition-transform">
@@ -120,9 +112,7 @@ export default function Navbar() {
                               href={`/products?cat=${category.slug}`}
                               className="p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-solar-500/30 transition"
                             >
-                              <p className="font-bold text-white text-sm">
-                                {category.label}
-                              </p>
+                              <p className="font-bold text-white text-sm">{category.label}</p>
                               <p className="text-xs text-white/50 line-clamp-1 mt-1">
                                 {category.desc}
                               </p>
@@ -148,7 +138,7 @@ export default function Navbar() {
                     {item.label}
                   </Link>
                 </li>
-              ),
+              )
             )}
           </ul>
 
@@ -156,19 +146,13 @@ export default function Navbar() {
             <Link href="/contact" className="btn-ghost !py-2.5 !px-5 !text-sm">
               Contact Us
             </Link>
-            <Link
-              href="/become-partner"
-              className="btn-solar !py-2.5 !px-5 !text-sm"
-            >
+            <Link href="/become-partner" className="btn-solar !py-2.5 !px-5 !text-sm">
               Become a Partner
               <ArrowRight size={16} />
             </Link>
           </div>
 
-          <button
-            className="lg:hidden text-white"
-            onClick={() => setOpen(true)}
-          >
+          <button className="lg:hidden text-white" onClick={() => setOpen(true)}>
             <Menu />
           </button>
         </div>
@@ -177,10 +161,10 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ x: "100%" }}
+            initial={{ x: '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 28 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 28 }}
             className="fixed inset-y-0 right-0 w-[86%] max-w-sm bg-ink-900 border-l border-white/10 z-[60] p-6 flex flex-col"
           >
             <div className="flex justify-between items-center">

@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import PageHero from "@/components/layout/PageHero";
-import { GUIDES, FAQS } from "@/lib/content";
-import { IMG } from "@/lib/products";
-import { BookOpen, Newspaper } from "lucide-react";
+'use client';
+import { useState } from 'react';
+import PageHero from '@/components/layout/PageHero';
+import { GUIDES, FAQS } from '@/lib/content';
+import { IMG } from '@/lib/products';
+import { BookOpen, Newspaper } from 'lucide-react';
 export default function Resources() {
   const [o, setO] = useState(0);
   return (
@@ -39,8 +39,8 @@ export default function Resources() {
             News & Updates
           </h2>
           <div className="mt-4 rounded-2xl bg-solar-gradient text-ink-950 p-6 font-semibold text-sm">
-            🚀 Crown Micro NOVA 12.6kW & Oyster IP66 now in Dhaka stock • Dealer
-            onboarding open nationwide.
+            🚀 Crown Micro NOVA 12.6kW & Oyster IP66 now in Dhaka stock • Dealer onboarding open
+            nationwide.
           </div>
         </div>
         <div>
@@ -56,14 +56,10 @@ export default function Resources() {
                   className="w-full text-left px-6 py-5 font-bold text-sm flex justify-between gap-4"
                 >
                   {f.q}
-                  <span className={o === i ? "text-solar-400" : ""}>
-                    {o === i ? "−" : "+"}
-                  </span>
+                  <span className={o === i ? 'text-solar-400' : ''}>{o === i ? '−' : '+'}</span>
                 </button>
                 {o === i && (
-                  <p className="px-6 pb-6 text-sm text-white/60 leading-relaxed">
-                    {f.a}
-                  </p>
+                  <p className="px-6 pb-6 text-sm text-white/60 leading-relaxed">{f.a}</p>
                 )}
               </div>
             ))}

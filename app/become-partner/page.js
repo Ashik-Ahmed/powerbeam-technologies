@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import PageHero from "@/components/layout/PageHero";
-import { IMG } from "@/lib/products";
-import { Handshake, Store, Truck, BadgePercent } from "lucide-react";
+'use client';
+import { useState } from 'react';
+import PageHero from '@/components/layout/PageHero';
+import { IMG } from '@/lib/products';
+import { Handshake, Store, Truck, BadgePercent } from 'lucide-react';
 export default function Partner() {
   const [sent, setSent] = useState(false);
   async function submit(e) {
     e.preventDefault();
     const fd = new FormData(e.target);
-    await fetch("/api/partner", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    await fetch('/api/partner', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(Object.fromEntries(fd)),
     });
     setSent(true);
@@ -29,25 +29,22 @@ export default function Partner() {
             {[
               {
                 i: Store,
-                t: "Dealership",
-                d: "District-level exclusive rights",
+                t: 'Dealership',
+                d: 'District-level exclusive rights',
               },
               {
                 i: BadgePercent,
-                t: "Attractive Margin",
-                d: "Competitive pricing & credit",
+                t: 'Attractive Margin',
+                d: 'Competitive pricing & credit',
               },
-              { i: Truck, t: "Fast Supply", d: "Dhaka warehouse stock" },
+              { i: Truck, t: 'Fast Supply', d: 'Dhaka warehouse stock' },
               {
                 i: Handshake,
-                t: "Training",
-                d: "Installation & sales training",
+                t: 'Training',
+                d: 'Installation & sales training',
               },
             ].map((c) => (
-              <div
-                key={c.t}
-                className="rounded-2xl bg-ink-900 border border-white/10 p-6"
-              >
+              <div key={c.t} className="rounded-2xl bg-ink-900 border border-white/10 p-6">
                 <c.i className="text-solar-500" />
                 <h3 className="font-bold mt-3">{c.t}</h3>
                 <p className="text-xs text-white/55 mt-1">{c.d}</p>
@@ -55,8 +52,8 @@ export default function Partner() {
             ))}
           </div>
           <div className="mt-6 rounded-2xl bg-white/5 border border-white/10 p-6 text-sm text-white/65">
-            Requirements: Trade license, showroom/service capability, initial
-            stock commitment. Our team will verify within 48 hours.
+            Requirements: Trade license, showroom/service capability, initial stock commitment. Our
+            team will verify within 48 hours.
           </div>
         </div>
         <div className="rounded-[2rem] bg-white text-ink-900 p-8">
@@ -66,9 +63,7 @@ export default function Partner() {
             </p>
           ) : (
             <form onSubmit={submit} className="grid gap-4">
-              <h2 className="font-display text-2xl font-extrabold">
-                Partner Inquiry Form
-              </h2>
+              <h2 className="font-display text-2xl font-extrabold">Partner Inquiry Form</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <input
                   name="name"
@@ -94,10 +89,7 @@ export default function Partner() {
                   placeholder="District / Area"
                   className="border rounded-xl px-4 py-3 text-sm bg-slate-50"
                 />
-                <select
-                  name="type"
-                  className="border rounded-xl px-4 py-3 text-sm bg-slate-50"
-                >
+                <select name="type" className="border rounded-xl px-4 py-3 text-sm bg-slate-50">
                   <option>Dealer</option>
                   <option>Sub-dealer</option>
                   <option>Installer</option>

@@ -1,14 +1,14 @@
-import PageHero from "@/components/layout/PageHero";
-import CTASection from "@/components/layout/CTASection";
-import SectionHeading from "@/components/ui/SectionHeading";
-import { Stagger, Item } from "@/components/ui/Reveal";
-import { INDUSTRIES } from "@/lib/content";
-import { IMG } from "@/lib/products";
-import * as L from "lucide-react";
+import PageHero from '@/components/layout/PageHero';
+import CTASection from '@/components/layout/CTASection';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { Stagger, Item } from '@/components/ui/Reveal';
+import { INDUSTRIES } from '@/lib/content';
+import { IMG } from '@/lib/products';
+import * as L from 'lucide-react';
 export const metadata = {
-  title: "Industries We Serve — Solar Across Bangladesh",
+  title: 'Industries We Serve — Solar Across Bangladesh',
   description:
-    "Residential, corporate, manufacturing, agriculture, education, healthcare, government & NGOs — tailored solar.",
+    'Residential, corporate, manufacturing, agriculture, education, healthcare, government & NGOs — tailored solar.',
 };
 export default function Industries() {
   return (
@@ -20,11 +20,7 @@ export default function Industries() {
         image={IMG.roof}
       />
       <section className="py-20 max-w-7xl mx-auto px-6">
-        <SectionHeading
-          dark
-          eyebrow="Industries"
-          title="Where We Deliver Impact"
-        />
+        <SectionHeading dark eyebrow="Industries" title="Where We Deliver Impact" />
         <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {INDUSTRIES.map((s) => {
             const I = L[s.icon] || L.Zap;

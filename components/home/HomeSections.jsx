@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import {
   CheckCircle2,
   ArrowRight,
@@ -18,38 +18,38 @@ import {
   Quote,
   Download,
   GitCompareArrows,
-} from "lucide-react";
-import Reveal, { Stagger, Item } from "../ui/Reveal";
-import SectionHeading from "../ui/SectionHeading";
-import ProductCard from "../products/ProductCard";
-import { PRODUCTS, IMG, CATEGORIES } from "@/lib/products";
-import { TESTIMONIALS, FAQS } from "@/lib/content";
-import { useState } from "react";
+} from 'lucide-react';
+import Reveal, { Stagger, Item } from '../ui/Reveal';
+import SectionHeading from '../ui/SectionHeading';
+import ProductCard from '../products/ProductCard';
+import { PRODUCTS, IMG, CATEGORIES } from '@/lib/products';
+import { TESTIMONIALS, FAQS } from '@/lib/content';
+import { useState } from 'react';
 export function WhyChoose() {
   const items = [
     {
       icon: ShieldCheck,
-      t: "Trusted Solar Expertise",
-      d: "Industry-focused, quality-assured Crown Micro products with technical support.",
-      pts: ["Quality-assured", "Technical knowledge", "Proven performance"],
+      t: 'Trusted Solar Expertise',
+      d: 'Industry-focused, quality-assured Crown Micro products with technical support.',
+      pts: ['Quality-assured', 'Technical knowledge', 'Proven performance'],
     },
     {
       icon: Handshake,
-      t: "Exclusive Partnership",
-      d: "Official channel partner — authentic products & reliable supply chain.",
-      pts: ["100% Genuine", "Official warranty", "Nationwide stock"],
+      t: 'Exclusive Partnership',
+      d: 'Official channel partner — authentic products & reliable supply chain.',
+      pts: ['100% Genuine', 'Official warranty', 'Nationwide stock'],
     },
     {
       icon: Headset,
-      t: "Customer-Centric",
-      d: "Solution-oriented recommendations & long-term after-sales care.",
-      pts: ["Free consultation", "AMC support", "Monitoring help"],
+      t: 'Customer-Centric',
+      d: 'Solution-oriented recommendations & long-term after-sales care.',
+      pts: ['Free consultation', 'AMC support', 'Monitoring help'],
     },
     {
       icon: Leaf,
-      t: "Sustainability Commitment",
-      d: "Accelerating renewable adoption & energy independence in Bangladesh.",
-      pts: ["Net-metering", "CO₂ reduction", "Energy freedom"],
+      t: 'Sustainability Commitment',
+      d: 'Accelerating renewable adoption & energy independence in Bangladesh.',
+      pts: ['Net-metering', 'CO₂ reduction', 'Energy freedom'],
     },
   ];
   return (
@@ -139,20 +139,19 @@ export function Partnership() {
             POWERED BY STRONG PARTNERSHIP
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-extrabold mt-5 leading-tight">
-            Exclusive Channel Partner of{" "}
+            Exclusive Channel Partner of{' '}
             <span className="text-gradient">Crown Micro Global Bangladesh</span>
           </h2>
           <p className="text-white/65 mt-5 leading-relaxed">
-            Global-quality solar technology + local distribution strength.
-            Authentic products, professional guidance & dependable service —
-            operating in 30+ countries.
+            Global-quality solar technology + local distribution strength. Authentic products,
+            professional guidance & dependable service — operating in 30+ countries.
           </p>
           <ul className="grid sm:grid-cols-2 gap-3 mt-7">
             {[
-              "Product excellence",
-              "Market expertise",
-              "Reliable supply chain",
-              "Technical support",
+              'Product excellence',
+              'Market expertise',
+              'Reliable supply chain',
+              'Technical support',
             ].map((t) => (
               <li
                 key={t}
@@ -179,9 +178,7 @@ export function Partnership() {
             />
           </div>
           <div className="absolute -bottom-6 -left-6 glass-dark rounded-2xl p-5 shadow-card">
-            <p className="font-display text-3xl font-extrabold text-solar-400">
-              30+
-            </p>
+            <p className="font-display text-3xl font-extrabold text-solar-400">30+</p>
             <p className="text-xs text-white/60">Countries Served</p>
           </div>
         </Reveal>
@@ -191,12 +188,12 @@ export function Partnership() {
 }
 export function Applications() {
   const apps = [
-    { icon: Home, t: "Residential Buildings" },
-    { icon: Building2, t: "Commercial Facilities" },
-    { icon: Factory, t: "Industrial Projects" },
-    { icon: GraduationCap, t: "Educational Institutions" },
-    { icon: Landmark, t: "Government & NGO" },
-    { icon: Satellite, t: "Remote & Off-grid" },
+    { icon: Home, t: 'Residential Buildings' },
+    { icon: Building2, t: 'Commercial Facilities' },
+    { icon: Factory, t: 'Industrial Projects' },
+    { icon: GraduationCap, t: 'Educational Institutions' },
+    { icon: Landmark, t: 'Government & NGO' },
+    { icon: Satellite, t: 'Remote & Off-grid' },
   ];
   return (
     <section className="py-24 bg-white text-ink-900">
@@ -212,10 +209,7 @@ export function Applications() {
               key={a.t}
               className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center hover:bg-ink-900 hover:text-white hover:border-ink-900 transition-all duration-300 group"
             >
-              <a.icon
-                className="mx-auto text-solar-600 group-hover:text-solar-400"
-                size={30}
-              />
+              <a.icon className="mx-auto text-solar-600 group-hover:text-solar-400" size={30} />
               <p className="text-sm font-bold mt-3">{a.t}</p>
             </Item>
           ))}
@@ -223,9 +217,7 @@ export function Applications() {
         <div className="mt-10 rounded-3xl overflow-hidden grid md:grid-cols-3 border border-slate-200">
           <div className="p-8 bg-ink-900 text-white">
             <h3 className="font-display font-bold text-xl">Download Catalog</h3>
-            <p className="text-sm text-white/60 mt-2">
-              Full Crown Micro specs & datasheets.
-            </p>
+            <p className="text-sm text-white/60 mt-2">Full Crown Micro specs & datasheets.</p>
             <a
               href="/catalog/powerbeam-crown-micro-catalog.pdf"
               className="btn-solar !py-2.5 mt-5 !text-sm"
@@ -235,20 +227,11 @@ export function Applications() {
             </a>
           </div>
           <div className="relative h-56 md:h-auto">
-            <Image
-              src={IMG.panel}
-              alt="Solar panels"
-              fill
-              className="object-cover"
-            />
+            <Image src={IMG.panel} alt="Solar panels" fill className="object-cover" />
           </div>
           <div className="p-8 bg-solar-gradient text-ink-950">
-            <h3 className="font-display font-bold text-xl">
-              Get Best Price in BD
-            </h3>
-            <p className="text-sm mt-2 font-medium">
-              Hybrid packages with battery & panels.
-            </p>
+            <h3 className="font-display font-bold text-xl">Get Best Price in BD</h3>
+            <p className="text-sm mt-2 font-medium">Hybrid packages with battery & panels.</p>
             <Link
               href="/contact"
               className="inline-flex mt-5 font-bold bg-ink-950 text-white px-6 py-2.5 rounded-full text-sm"
@@ -265,11 +248,7 @@ export function Testimonials() {
   return (
     <section className="py-24 bg-ink-950">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionHeading
-          dark
-          eyebrow="Testimonials"
-          title="Trusted Across Bangladesh"
-        />
+        <SectionHeading dark eyebrow="Testimonials" title="Trusted Across Bangladesh" />
         <div className="grid md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t) => (
             <Reveal
@@ -277,9 +256,7 @@ export function Testimonials() {
               className="rounded-3xl bg-ink-800 border border-white/10 p-7 relative"
             >
               <Quote className="text-solar-500" size={28} />
-              <p className="text-white/70 text-sm mt-4 leading-relaxed">
-                “{t.t}”
-              </p>
+              <p className="text-white/70 text-sm mt-4 leading-relaxed">“{t.t}”</p>
               <div className="mt-6 pt-5 border-t border-white/10">
                 <p className="font-bold">{t.n}</p>
                 <p className="text-xs text-solar-400">{t.r}</p>
@@ -297,23 +274,17 @@ export function HomeFAQ() {
   return (
     <section className="py-24 bg-[#F6F8FB] text-ink-900">
       <div className="max-w-4xl mx-auto px-6">
-        <SectionHeading
-          eyebrow="FAQs"
-          title="Solar Buying Questions, Answered"
-        />
+        <SectionHeading eyebrow="FAQs" title="Solar Buying Questions, Answered" />
         <div className="space-y-3">
           {FAQS.slice(0, 5).map((f, i) => (
-            <div
-              key={i}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden"
-            >
+            <div key={i} className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
               <button
                 onClick={() => setO(o === i ? -1 : i)}
                 className="w-full text-left px-6 py-5 font-bold flex justify-between items-center"
               >
                 {f.q}
                 <span
-                  className={`w-8 h-8 rounded-full grid place-items-center transition ${o === i ? "bg-solar-500 text-ink-950 rotate-45" : "bg-slate-100"}`}
+                  className={`w-8 h-8 rounded-full grid place-items-center transition ${o === i ? 'bg-solar-500 text-ink-950 rotate-45' : 'bg-slate-100'}`}
                 >
                   +
                 </span>

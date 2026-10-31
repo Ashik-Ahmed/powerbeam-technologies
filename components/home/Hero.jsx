@@ -1,23 +1,16 @@
-"use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
-import {
-  ArrowRight,
-  ShieldCheck,
-  Play,
-  Zap,
-  Sun,
-  BatteryCharging,
-} from "lucide-react";
-import { IMG } from "@/lib/products";
-import { STATS } from "@/lib/constants";
-import { useRef } from "react";
+'use client';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, ShieldCheck, Play, Zap, Sun, BatteryCharging } from 'lucide-react';
+import { IMG } from '@/lib/products';
+import { STATS } from '@/lib/constants';
+import { useRef } from 'react';
 export default function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
   const yBg = useTransform(scrollYProgress, [0, 1], [0, 180]);
   const yFg = useTransform(scrollYProgress, [0, 1], [0, -60]);
@@ -63,8 +56,9 @@ export default function Hero() {
             transition={{ delay: 0.1, duration: 0.8 }}
             className="font-display text-[2.6rem] leading-[1.02] md:text-7xl font-extrabold mt-6"
           >
-            Powering a <span className="text-gradient">Sustainable Future</span>{" "}
-            with Reliable Solar
+            {/* Powering a <span className="text-gradient">Sustainable Future</span>{" "}
+            with Reliable Solar */}
+            Smart Energy for a <span className="text-gradient">Smarter Future</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -72,8 +66,8 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed"
           >
-            High-quality Crown Micro solar inverters, LiFePO4 batteries & ESS
-            for homes, businesses & industries across Bangladesh.
+            High-quality Crown Micro solar inverters, LiFePO4 batteries & ESS for homes, businesses
+            & industries across Bangladesh.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,10 +86,7 @@ export default function Hero() {
               href="/become-partner"
               className="hidden sm:inline-flex items-center gap-2 font-semibold text-solar-400 hover:text-solar-300 px-2"
             >
-              <Play
-                size={16}
-                className="rounded-full border border-solar-500 p-0.5"
-              />
+              <Play size={16} className="rounded-full border border-solar-500 p-0.5" />
               Become a Partner
             </Link>
           </motion.div>
@@ -138,10 +129,7 @@ export default function Hero() {
                   LIVE GENERATION
                 </p>
                 <p className="font-display text-2xl font-bold mt-1">
-                  8.42 kW{" "}
-                  <span className="text-sm text-white/50">
-                    • 32.6 kWh today
-                  </span>
+                  8.42 kW <span className="text-sm text-white/50">• 32.6 kWh today</span>
                 </p>
               </div>
               <Sun className="text-solar-500 animate-spinSlow" size={36} />
@@ -179,14 +167,14 @@ export default function Hero() {
         <div className="marquee-track gap-12 text-xs font-bold tracking-widest text-white/50">
           {Array(2)
             .fill([
-              "XAVIER HYBRID",
-              "ARCEUS 6.5KW",
-              "NOVA 12.6KW",
-              "ELEGO OYSTER IP66",
-              "VOLMORE 350KW",
-              "NURA ESS",
-              "CMLB LiFePO4",
-              "SOLAR PUMP 200KW",
+              'XAVIER HYBRID',
+              'ARCEUS 6.5KW',
+              'NOVA 12.6KW',
+              'ELEGO OYSTER IP66',
+              'VOLMORE 350KW',
+              'NURA ESS',
+              'CMLB LiFePO4',
+              'SOLAR PUMP 200KW',
             ])
             .flat()
             .map((t, i) => (

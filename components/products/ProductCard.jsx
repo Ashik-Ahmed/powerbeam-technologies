@@ -1,8 +1,8 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowUpRight, BadgeCheck } from "lucide-react";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, BadgeCheck } from 'lucide-react';
 export default function ProductCard({ p, i = 0 }) {
   return (
     <motion.article

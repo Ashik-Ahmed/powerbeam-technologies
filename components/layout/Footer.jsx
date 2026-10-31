@@ -1,17 +1,8 @@
-import Link from "next/link";
-import {
-  Zap,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Youtube,
-  Linkedin,
-} from "lucide-react";
-import { CONTACT } from "@/lib/constants";
-import { CATEGORIES } from "@/lib/products";
-import Image from "next/image";
+import Link from 'next/link';
+import { Zap, Phone, Mail, MapPin, Clock, Facebook, Youtube, Linkedin } from 'lucide-react';
+import { CONTACT } from '@/lib/constants';
+import { CATEGORIES } from '@/lib/products';
+import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="bg-[#020409] border-t border-white/10 relative overflow-hidden">
@@ -21,16 +12,16 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                            src="/images/powerbeam-logo.png"
-                            alt="Powerbeam Logo"
-                            width={120}
-                            height={40}
-                            priority
-                          />
+                src="/images/powerbeam-logo.svg"
+                alt="Powerbeam Logo"
+                width={150}
+                height={60}
+                priority
+              />
             </div>
             <p className="text-white/60 text-sm mt-4 leading-relaxed">
-              Exclusive channel partner of Crown Micro Global Bangladesh Ltd.
-              Reliable solar inverters, batteries & ESS nationwide.
+              Exclusive channel partner of Crown Micro Global Bangladesh Ltd. Reliable solar
+              inverters, batteries & ESS nationwide.
             </p>
             <div className="flex gap-3 mt-5">
               {[Facebook, Youtube, Linkedin].map((I, i) => (
@@ -45,16 +36,11 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-4 text-solar-400">
-              Products
-            </h4>
+            <h4 className="font-display font-bold mb-4 text-solar-400">Products</h4>
             <ul className="space-y-2.5 text-sm text-white/65">
               {CATEGORIES.map((c) => (
                 <li key={c.slug}>
-                  <Link
-                    href={`/products?cat=${c.slug}`}
-                    className="hover:text-solar-400"
-                  >
+                  <Link href={`/products?cat=${c.slug}`} className="hover:text-solar-400">
                     {c.label}
                   </Link>
                 </li>
@@ -62,18 +48,16 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-4 text-solar-400">
-              Company
-            </h4>
+            <h4 className="font-display font-bold mb-4 text-solar-400">Company</h4>
             <ul className="space-y-2.5 text-sm text-white/65">
               {[
-                ["About Us", "/about"],
-                ["Solutions", "/solutions"],
-                ["Services", "/services"],
-                ["Partnership", "/partnership"],
-                ["Resources", "/resources"],
-                ["Compare", "/compare"],
-                ["Become Partner", "/become-partner"],
+                ['About Us', '/about'],
+                ['Solutions', '/solutions'],
+                ['Services', '/services'],
+                ['Partnership', '/partnership'],
+                ['Resources', '/resources'],
+                ['Compare', '/compare'],
+                ['Become Partner', '/become-partner'],
               ].map(([l, h]) => (
                 <li key={h}>
                   <Link href={h} className="hover:text-solar-400">
@@ -84,28 +68,20 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-4 text-solar-400">
-              Contact Dhaka
-            </h4>
+            <h4 className="font-display font-bold mb-4 text-solar-400">Contact Dhaka</h4>
             <ul className="space-y-3 text-sm text-white/65">
               <li className="flex gap-2">
                 <MapPin size={16} className="text-solar-500 shrink-0" />
                 {CONTACT.address}
               </li>
               <li>
-                <a
-                  href={`tel:${CONTACT.phone}`}
-                  className="flex gap-2 hover:text-solar-400"
-                >
+                <a href={`tel:${CONTACT.phone}`} className="flex gap-2 hover:text-solar-400">
                   <Phone size={16} className="text-solar-500" />
                   {CONTACT.phoneDisplay}
                 </a>
               </li>
               <li>
-                <a
-                  href={`mailto:${CONTACT.email}`}
-                  className="flex gap-2 hover:text-solar-400"
-                >
+                <a href={`mailto:${CONTACT.email}`} className="flex gap-2 hover:text-solar-400">
                   <Mail size={16} className="text-solar-500" />
                   {CONTACT.email}
                 </a>
@@ -115,19 +91,15 @@ export default function Footer() {
                 {CONTACT.hours}
               </li>
             </ul>
-            <Link
-              href="/contact"
-              className="btn-solar !py-2.5 !px-5 !text-sm mt-5"
-            >
+            <Link href="/contact" className="btn-solar !py-2.5 !px-5 !text-sm mt-5">
               Request Consultation
             </Link>
           </div>
         </div>
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/40">
           <p>
-            © <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
-            Powerbeam Technologies. All rights
-            reserved. | Solar Inverter Supplier in Bangladesh
+            © <span suppressHydrationWarning>{new Date().getFullYear()}</span> Powerbeam
+            Technologies. All rights reserved. | Solar Inverter Supplier in Bangladesh
           </p>
           <p>ISO 9001 • IEC 62109 • CE • IP66 • BSTI Aligned</p>
         </div>

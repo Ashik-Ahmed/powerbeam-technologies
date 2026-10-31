@@ -1,7 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
-import { CONTACT } from "@/lib/constants";
+'use client';
+import { motion } from 'framer-motion';
+import { MessageCircle } from 'lucide-react';
+import { CONTACT } from '@/lib/constants';
 export default function WhatsAppButton() {
   return (
     <motion.a

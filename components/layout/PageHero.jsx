@@ -1,20 +1,13 @@
-"use client";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+'use client';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ChevronRight } from 'lucide-react';
 export default function PageHero({ title, subtitle, crumb, image }) {
   return (
     <section className="relative min-h-[52vh] flex items-end overflow-hidden pt-36 pb-14">
       {image && (
-        <Image
-          src={image}
-          alt={title}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        <Image src={image} alt={title} fill priority className="object-cover" sizes="100vw" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/80 to-ink-950/40" />
       <div className="absolute inset-0 grid-bg opacity-60" />

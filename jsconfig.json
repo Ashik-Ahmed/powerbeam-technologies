@@ -1,9 +1,9 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"]
-		},
-		"ignoreDeprecations": "6.0"
-	}
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "ignoreDeprecations": "6.0"
+  }
 }

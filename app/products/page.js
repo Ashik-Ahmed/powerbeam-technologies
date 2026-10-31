@@ -1,33 +1,33 @@
-"use client";
-import { useState, useMemo, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
-import PageHero from "@/components/layout/PageHero";
-import ProductCard from "@/components/products/ProductCard";
-import { PRODUCTS, CATEGORIES, IMG } from "@/lib/products";
-import { Search } from "lucide-react";
+'use client';
+import { useState, useMemo, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import PageHero from '@/components/layout/PageHero';
+import ProductCard from '@/components/products/ProductCard';
+import { PRODUCTS, CATEGORIES, IMG } from '@/lib/products';
+import { Search } from 'lucide-react';
 function List() {
   const sp = useSearchParams();
-  const init = sp.get("cat") || "all";
+  const init = sp.get('cat') || 'all';
   const [cat, setCat] = useState(init);
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState('');
   const filtered = useMemo(
     () =>
       PRODUCTS.filter(
         (p) =>
-          (cat === "all" || p.category === cat) &&
-          (p.name + p.series + p.power).toLowerCase().includes(q.toLowerCase()),
+          (cat === 'all' || p.category === cat) &&
+          (p.name + p.series + p.power).toLowerCase().includes(q.toLowerCase())
       ),
-    [cat, q],
+    [cat, q]
   );
   return (
     <>
       <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
         <div className="flex flex-wrap gap-2">
-          {[{ slug: "all", label: "All" }, ...CATEGORIES].map((c) => (
+          {[{ slug: 'all', label: 'All' }, ...CATEGORIES].map((c) => (
             <button
               key={c.slug}
               onClick={() => setCat(c.slug)}
-              className={`text-xs font-bold px-4 py-2.5 rounded-full border transition ${cat === c.slug ? "bg-solar-gradient text-ink-950 border-transparent" : "border-white/15 text-white/70 hover:border-solar-500/50"}`}
+              className={`text-xs font-bold px-4 py-2.5 rounded-full border transition ${cat === c.slug ? 'bg-solar-gradient text-ink-950 border-transparent' : 'border-white/15 text-white/70 hover:border-solar-500/50'}`}
             >
               {c.label}
             </button>
@@ -52,9 +52,7 @@ function List() {
         ))}
       </div>
       {filtered.length === 0 && (
-        <p className="text-center text-white/50 py-16">
-          No products found. Try another keyword.
-        </p>
+        <p className="text-center text-white/50 py-16">No products found. Try another keyword.</p>
       )}
     </>
   );

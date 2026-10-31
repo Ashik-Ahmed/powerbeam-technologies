@@ -1,7 +1,7 @@
-"use client";
-import { useState } from "react";
-import PageHero from "@/components/layout/PageHero";
-import { PRODUCTS, IMG } from "@/lib/products";
+'use client';
+import { useState } from 'react';
+import PageHero from '@/components/layout/PageHero';
+import { PRODUCTS, IMG } from '@/lib/products';
 export default function Compare() {
   const opts = PRODUCTS.slice(0, 10);
   const [a, setA] = useState(opts[2].slug);
@@ -9,11 +9,11 @@ export default function Compare() {
   const pa = PRODUCTS.find((p) => p.slug === a);
   const pb = PRODUCTS.find((p) => p.slug === b);
   const rows = [
-    ["Power Range", pa.power, pb.power],
-    ["Efficiency", pa.efficiency, pb.efficiency],
-    ["Warranty", pa.warranty, pb.warranty],
-    ["Category", pa.categoryLabel, pb.categoryLabel],
-    ["Series", pa.series, pb.series],
+    ['Power Range', pa.power, pb.power],
+    ['Efficiency', pa.efficiency, pb.efficiency],
+    ['Warranty', pa.warranty, pb.warranty],
+    ['Category', pa.categoryLabel, pb.categoryLabel],
+    ['Series', pa.series, pb.series],
   ];
   return (
     <main className="bg-ink-950">
@@ -54,10 +54,7 @@ export default function Compare() {
             </thead>
             <tbody>
               {rows.map((r) => (
-                <tr
-                  key={r[0]}
-                  className="border-t border-white/5 bg-white/[.02]"
-                >
+                <tr key={r[0]} className="border-t border-white/5 bg-white/[.02]">
                   <td className="p-5 font-bold">{r[0]}</td>
                   <td className="p-5">{r[1]}</td>
                   <td className="p-5">{r[2]}</td>

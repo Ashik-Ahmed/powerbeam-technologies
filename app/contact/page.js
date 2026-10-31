@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import PageHero from "@/components/layout/PageHero";
-import { CONTACT } from "@/lib/constants";
-import { IMG, PRODUCTS } from "@/lib/products";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+'use client';
+import { useState } from 'react';
+import PageHero from '@/components/layout/PageHero';
+import { CONTACT } from '@/lib/constants';
+import { IMG, PRODUCTS } from '@/lib/products';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 export default function Contact() {
   const [sent, setSent] = useState(false);
   const [load, setLoad] = useState(false);
@@ -12,9 +12,9 @@ export default function Contact() {
     setLoad(true);
     const fd = new FormData(e.target);
     const body = Object.fromEntries(fd);
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     });
     setLoad(false);
@@ -31,15 +31,12 @@ export default function Contact() {
       <section className="py-16 max-w-7xl mx-auto px-6 grid lg:grid-cols-[.9fr_1.1fr] gap-8">
         <div className="space-y-4">
           {[
-            { i: MapPin, t: "Office Address", d: CONTACT.address },
-            { i: Phone, t: "Phone / WhatsApp", d: CONTACT.phoneDisplay },
-            { i: Mail, t: "Email", d: CONTACT.email },
-            { i: Clock, t: "Business Hours", d: CONTACT.hours },
+            { i: MapPin, t: 'Office Address', d: CONTACT.address },
+            { i: Phone, t: 'Phone / WhatsApp', d: CONTACT.phoneDisplay },
+            { i: Mail, t: 'Email', d: CONTACT.email },
+            { i: Clock, t: 'Business Hours', d: CONTACT.hours },
           ].map((c) => (
-            <div
-              key={c.t}
-              className="rounded-2xl bg-ink-900 border border-white/10 p-5 flex gap-4"
-            >
+            <div key={c.t} className="rounded-2xl bg-ink-900 border border-white/10 p-5 flex gap-4">
               <span className="w-11 h-11 rounded-xl bg-solar-gradient grid place-items-center shrink-0">
                 <c.i size={18} className="text-ink-950" />
               </span>
@@ -63,12 +60,9 @@ export default function Contact() {
             <div className="h-full grid place-items-center text-center py-16">
               <div>
                 <CheckCircle2 size={56} className="mx-auto text-green-600" />
-                <h3 className="font-display text-2xl font-bold mt-4">
-                  Thank You!
-                </h3>
+                <h3 className="font-display text-2xl font-bold mt-4">Thank You!</h3>
                 <p className="text-slate-600 mt-2">
-                  We’ll contact you within business hours. For urgent:{" "}
-                  {CONTACT.phoneDisplay}
+                  We’ll contact you within business hours. For urgent: {CONTACT.phoneDisplay}
                 </p>
               </div>
             </div>
@@ -118,11 +112,8 @@ export default function Contact() {
                 placeholder="Message: load, location, monthly bill…"
                 className="sm:col-span-2 border border-slate-200 rounded-xl px-4 py-3.5 text-sm bg-slate-50"
               />
-              <button
-                disabled={load}
-                className="sm:col-span-2 btn-dark !bg-ink-950 w-full"
-              >
-                {load ? "Sending…" : "Send Inquiry"}
+              <button disabled={load} className="sm:col-span-2 btn-dark !bg-ink-950 w-full">
+                {load ? 'Sending…' : 'Send Inquiry'}
                 <Send size={16} />
               </button>
             </form>

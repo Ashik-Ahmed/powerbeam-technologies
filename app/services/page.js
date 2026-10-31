@@ -1,14 +1,14 @@
-import PageHero from "@/components/layout/PageHero";
-import CTASection from "@/components/layout/CTASection";
-import SectionHeading from "@/components/ui/SectionHeading";
-import { Stagger, Item } from "@/components/ui/Reveal";
-import { IMG } from "@/lib/products";
-import { SERVICES } from "@/lib/content";
-import * as L from "lucide-react";
+import PageHero from '@/components/layout/PageHero';
+import CTASection from '@/components/layout/CTASection';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { Stagger, Item } from '@/components/ui/Reveal';
+import { IMG } from '@/lib/products';
+import { SERVICES } from '@/lib/content';
+import * as L from 'lucide-react';
 export const metadata = {
-  title: "Solar Services: Design, Supply, Installation & AMC in Bangladesh",
+  title: 'Solar Services: Design, Supply, Installation & AMC in Bangladesh',
   description:
-    "Consultation, system design, authentic supply, installation support & after-sales AMC across Bangladesh.",
+    'Consultation, system design, authentic supply, installation support & after-sales AMC across Bangladesh.',
 };
 export default function Services() {
   return (
@@ -20,11 +20,7 @@ export default function Services() {
         image={IMG.panel}
       />
       <section className="py-20 max-w-7xl mx-auto px-6">
-        <SectionHeading
-          dark
-          eyebrow="End-to-End"
-          title="Complete Solar Lifecycle Support"
-        />
+        <SectionHeading dark eyebrow="End-to-End" title="Complete Solar Lifecycle Support" />
         <Stagger className="grid md:grid-cols-3 gap-6">
           {SERVICES.map((s) => {
             const I = L[s.icon] || L.Zap;
@@ -37,19 +33,17 @@ export default function Services() {
                   <I className="text-solar-500" />
                 </span>
                 <h3 className="font-display font-bold text-xl mt-5">{s.t}</h3>
-                <p className="text-sm text-white/60 mt-3 leading-relaxed">
-                  {s.d}
-                </p>
+                <p className="text-sm text-white/60 mt-3 leading-relaxed">{s.d}</p>
               </Item>
             );
           })}
         </Stagger>
         <div className="mt-12 grid md:grid-cols-4 gap-4 text-center">
           {[
-            "1. Survey & Quote",
-            "2. Design & Supply",
-            "3. Install & Commission",
-            "4. Monitor & Maintain",
+            '1. Survey & Quote',
+            '2. Design & Supply',
+            '3. Install & Commission',
+            '4. Monitor & Maintain',
           ].map((t, i) => (
             <div
               key={t}
