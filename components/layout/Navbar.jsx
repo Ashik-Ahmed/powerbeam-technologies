@@ -5,15 +5,28 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Mail, Menu, Phone, X, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 import { CONTACT, NAV } from '@/lib/constants';
 import { CATEGORIES } from '@/lib/products';
 import { cn } from '@/lib/utils';
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [prod, setProd] = useState(false);
+  const isActive = (item) => {
+    if (item.mega) {
+      return (
+        pathname === '/products' || pathname.startsWith('/products/') || pathname === '/compare'
+      );
+    }
+
+    return item.href === '/'
+      ? pathname === '/'
+      : pathname === item.href || pathname.startsWith(`${item.href}/`);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -62,6 +75,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/images/powerbeam-logo.svg"
+              // src="/images/Logo_Horizontal.svg"
               alt="Powerbeam Logo"
               width={150}
               height={60}
@@ -91,7 +105,15 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 hover:text-solar-400 transition"
+                    aria-current={
+                      pathname === item.href ? 'page' : isActive(item) ? 'location' : undefined
+                    }
+                    className={cn(
+                      'relative flex items-center gap-1 transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-solar-500 after:transition-all',
+                      isActive(item)
+                        ? 'text-solar-400 after:w-full'
+                        : 'hover:text-solar-400 after:w-0 hover:after:w-full'
+                    )}
                   >
                     Products
                     <ChevronDown size={14} />
@@ -133,7 +155,15 @@ export default function Navbar() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="hover:text-solar-400 transition relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-solar-500 after:transition-all"
+                    aria-current={
+                      pathname === item.href ? 'page' : isActive(item) ? 'location' : undefined
+                    }
+                    className={cn(
+                      'relative transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-solar-500 after:transition-all',
+                      isActive(item)
+                        ? 'text-solar-400 after:w-full'
+                        : 'hover:text-solar-400 after:w-0 hover:after:w-full'
+                    )}
                   >
                     {item.label}
                   </Link>
@@ -180,7 +210,13 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 border-b border-white/5 font-display text-lg"
+                  aria-current={
+                    pathname === item.href ? 'page' : isActive(item) ? 'location' : undefined
+                  }
+                  className={cn(
+                    'block py-3 border-b border-white/5 font-display text-lg',
+                    isActive(item) && 'text-solar-400 font-bold'
+                  )}
                 >
                   {item.label}
                 </Link>

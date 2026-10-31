@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, BadgeCheck } from 'lucide-react';
 export default function ProductCard({ p, i = 0 }) {
+  const isLocalProductImage = p.image.startsWith('/catalog/images/');
+
   return (
     <motion.article
       layout
@@ -13,15 +15,23 @@ export default function ProductCard({ p, i = 0 }) {
       transition={{ delay: (i % 3) * 0.08 }}
       className="group relative rounded-3xl overflow-hidden bg-ink-800 border border-white/10 hover:border-solar-500/50 card-hover"
     >
-      <div className="relative h-56 overflow-hidden">
+      <div
+        className={`relative h-56 overflow-hidden ${isLocalProductImage ? 'bg-zinc-100' : 'bg-ink-900'}`}
+      >
         <Image
           src={p.image}
           alt={p.name}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-700"
+          className={
+            isLocalProductImage
+              ? 'object-contain p-5'
+              : 'object-cover group-hover:scale-110 transition-transform duration-700'
+          }
           sizes="(max-width:768px)100vw,33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/20 to-transparent" />
+        {!isLocalProductImage && (
+          <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/20 to-transparent" />
+        )}
         {p.badge && (
           <span className="absolute top-4 left-4 text-[11px] font-bold bg-solar-gradient text-ink-950 px-3 py-1.5 rounded-full flex items-center gap-1">
             <BadgeCheck size={12} />
