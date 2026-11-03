@@ -8,7 +8,7 @@ import { IMG } from '@/lib/products';
 export const metadata = {
   title: 'About Us — Trusted Solar Supplier in Bangladesh',
   description:
-    'Powerbeam Technologies accelerates clean energy adoption in Bangladesh with Crown Micro solar technology, nationwide distribution & expert support.',
+    'Powerbeam Technologies accelerates clean energy adoption in Bangladesh with solar technology, nationwide distribution & expert support.',
 };
 const values = [
   'Quality First',
@@ -34,9 +34,8 @@ export default function About() {
           </h2>
           <p className="text-white/65 mt-5 leading-relaxed">
             Powerbeam Technologies combines advanced solar technology with strong distribution to
-            deliver efficiency, durability & long-term performance. As exclusive channel partner of
-            Crown Micro Global Bangladesh Ltd, we ensure authentic products, professional support &
-            nationwide reach.
+            deliver efficiency, durability & long-term performance. We ensure authentic products,
+            professional support & nationwide reach.
           </p>
           <p className="text-white/65 mt-4 leading-relaxed">
             We help customers reduce energy costs, improve reliability & contribute to a cleaner

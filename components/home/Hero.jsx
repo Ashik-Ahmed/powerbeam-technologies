@@ -66,8 +66,8 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-white/70 text-lg mt-6 max-w-xl leading-relaxed"
           >
-            High-quality Crown Micro solar inverters, LiFePO4 batteries & ESS for homes, businesses
-            & industries across Bangladesh.
+            Powerbeam Technologies delivers hybrid, on-grid & off-grid inverters, LiFePO4 batteries
+            & solar pumps in Dhaka Bangladesh. Residential, commercial & industrial solutions.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

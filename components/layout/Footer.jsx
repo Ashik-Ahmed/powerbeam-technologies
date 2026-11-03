@@ -21,8 +21,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/60 text-sm mt-4 leading-relaxed">
-              Exclusive channel partner of Crown Micro Global Bangladesh Ltd. Reliable solar
-              inverters, batteries & ESS nationwide.
+              Powering homes and businesses across the country with tier-one solar panels,
+              high-efficiency inverters, and dependable energy storage solutions.
             </p>
             <div className="flex gap-3 mt-5">
               {[Facebook, Youtube, Linkedin].map((I, i) => (

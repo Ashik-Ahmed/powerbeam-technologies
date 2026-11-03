@@ -13,8 +13,8 @@ export default function CTASection() {
             Ready to Switch to <span className="text-gradient">Solar Energy?</span>
           </h2>
           <p className="text-white/70 mt-4 max-w-xl mx-auto relative">
-            Talk to our experts to find the right Crown Micro solar solution for your energy needs.
-            Free site survey in Dhaka.
+            Talk to our experts to find the right solar solution for your energy needs. Free site
+            survey in Dhaka.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8 relative">
             <Link href="/contact" className="btn-solar">

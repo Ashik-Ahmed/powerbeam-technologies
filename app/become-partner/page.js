@@ -19,7 +19,7 @@ export default function Partner() {
     <main className="bg-ink-950">
       <PageHero
         title="Become a Dealer / Partner"
-        subtitle="Join Bangladesh’s fastest growing Crown Micro network — attractive margins & technical training."
+        subtitle="Join Bangladesh’s fastest growing Solar network — attractive margins & technical training."
         crumb="Partner"
         image={IMG.field}
       />

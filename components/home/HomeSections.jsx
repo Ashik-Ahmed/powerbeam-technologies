@@ -30,7 +30,7 @@ export function WhyChoose() {
     {
       icon: ShieldCheck,
       t: 'Trusted Solar Expertise',
-      d: 'Industry-focused, quality-assured Crown Micro products with technical support.',
+      d: 'Industry-focused, quality-assured products with technical support.',
       pts: ['Quality-assured', 'Technical knowledge', 'Proven performance'],
     },
     {
@@ -59,7 +59,7 @@ export function WhyChoose() {
           dark
           eyebrow="Why Powerbeam"
           title="Engineered for Bangladesh. Backed by Global Tech."
-          desc="We combine Crown Micro innovation with local expertise for maximum ROI."
+          desc="We combine innovation with local expertise for maximum ROI."
         />
         <Stagger className="grid md:grid-cols-4 gap-5">
           {items.map((c) => (
@@ -217,7 +217,7 @@ export function Applications() {
         <div className="mt-10 rounded-3xl overflow-hidden grid md:grid-cols-3 border border-slate-200">
           <div className="p-8 bg-ink-900 text-white">
             <h3 className="font-display font-bold text-xl">Download Catalog</h3>
-            <p className="text-sm text-white/60 mt-2">Full Crown Micro specs & datasheets.</p>
+            <p className="text-sm text-white/60 mt-2">Full specs & datasheets.</p>
             <a
               href="/catalog/powerbeam-crown-micro-catalog.pdf"
               className="btn-solar !py-2.5 mt-5 !text-sm"

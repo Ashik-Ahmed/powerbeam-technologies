@@ -23,7 +23,7 @@ export const metadata = {
     template: '%s | Powerbeam Technologies Bangladesh',
   },
   description:
-    'Powerbeam Technologies — exclusive channel partner of Crown Micro Global Bangladesh. Hybrid, on-grid, off-grid inverters, LiFePO4 batteries & solar pumps with nationwide support in Dhaka, Bangladesh.',
+    'Powerbeam Technologies — reliable source for solar inverters, batteries & ESS. Hybrid, on-grid, off-grid inverters, LiFePO4 batteries & solar pumps with nationwide support in Dhaka, Bangladesh.',
   keywords: defaultKeywords,
   authors: [{ name: SITE_NAME }],
   robots: {
@@ -47,7 +47,7 @@ export const metadata = {
     siteName: SITE_NAME,
     title: 'Powerbeam Technologies | Powering a Sustainable Future in Bangladesh',
     description:
-      'Reliable Crown Micro solar inverters, ESS & batteries. Residential, commercial & industrial solutions.',
+      'Reliable solar inverters, ESS & batteries. Residential, commercial & industrial solutions.',
     images: [
       {
         url: `${SITE_URL}/social-preview.svg`,
@@ -60,7 +60,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Powerbeam Technologies Bangladesh',
-    description: 'Exclusive Crown Micro partner — solar inverters & batteries.',
+    description: 'Reliable solar inverters & batteries.',
     images: [`${SITE_URL}/social-preview.svg`],
   },
   verification: { google: 'google-site-verification-code' },
