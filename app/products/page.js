@@ -44,7 +44,7 @@ function List() {
         </label>
       </div>
       <p className="text-white/50 text-sm mb-6">
-        {filtered.length} products • Genuine Crown Micro with official warranty
+        {filtered.length} products • Genuine Product with official warranty
       </p>
       <div className="grid md:grid-cols-3 gap-6">
         {filtered.map((p, i) => (

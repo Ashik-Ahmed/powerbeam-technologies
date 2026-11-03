@@ -74,7 +74,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/images/powerbeam-logo.svg"
+              // src="/images/powerbeam-logo.svg"
+              src="/images/Logo_Final-white-text.svg"
               // src="/images/Logo_Horizontal.svg"
               alt="Powerbeam Logo"
               width={150}

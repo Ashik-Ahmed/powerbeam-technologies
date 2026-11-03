@@ -31,7 +31,8 @@ export default function Contact() {
       <section className="py-16 max-w-7xl mx-auto px-6 grid lg:grid-cols-[.9fr_1.1fr] gap-8">
         <div className="space-y-4">
           {[
-            { i: MapPin, t: 'Office Address', d: CONTACT.address },
+            { i: MapPin, t: 'Dhaka Office', d: CONTACT.address },
+            { i: MapPin, t: 'Rajshahi Office', d: CONTACT.rajshahiAddress },
             { i: Phone, t: 'Phone / WhatsApp', d: CONTACT.phoneDisplay },
             { i: Mail, t: 'Email', d: CONTACT.email },
             { i: Clock, t: 'Business Hours', d: CONTACT.hours },

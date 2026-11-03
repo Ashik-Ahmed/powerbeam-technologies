@@ -82,7 +82,7 @@ export default function Detail({ params }) {
             </ul>
             <div className="flex flex-wrap gap-4 mt-8">
               <Link href={`/contact?product=${p.slug}`} className="btn-solar">
-                Request Best Price
+                Call for Price
               </Link>
               <a href="https://wa.me/8801799608805" className="btn-ghost">
                 <Phone size={18} />

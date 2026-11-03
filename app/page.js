@@ -26,7 +26,7 @@ export default function Home() {
       <FeaturedProducts />
       <Partnership />
       <Applications />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <HomeFAQ />
       <CTASection />
     </main>

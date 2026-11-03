@@ -12,7 +12,8 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src="/images/powerbeam-logo.svg"
+                // src="/images/powerbeam-logo.svg"
+                src="/images/Logo_Final-white-text.svg"
                 alt="Powerbeam Logo"
                 width={150}
                 height={60}
@@ -68,11 +69,17 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-4 text-solar-400">Contact Dhaka</h4>
+            <h4 className="font-display font-bold mb-4 text-solar-400">Contact</h4>
             <ul className="space-y-3 text-sm text-white/65">
+              <h5 className="text-white font-semibold">Dhaka Office</h5>
               <li className="flex gap-2">
                 <MapPin size={16} className="text-solar-500 shrink-0" />
                 {CONTACT.address}
+              </li>
+              <h5 className="text-white font-semibold">Rajshahi Office</h5>
+              <li className="flex gap-2">
+                <MapPin size={16} className="text-solar-500 shrink-0" />
+                {CONTACT.rajshahiAddress}
               </li>
               <li>
                 <a href={`tel:${CONTACT.phone}`} className="flex gap-2 hover:text-solar-400">
@@ -101,7 +108,7 @@ export default function Footer() {
             © <span suppressHydrationWarning>{new Date().getFullYear()}</span> Powerbeam
             Technologies. All rights reserved. | Solar Inverter Supplier in Bangladesh
           </p>
-          <p>ISO 9001 • IEC 62109 • CE • IP66 • BSTI Aligned</p>
+          <p>ISO 9001 • IP66 • SREDA and BSTI Enlisted</p>
         </div>
       </div>
     </footer>
