@@ -7,18 +7,26 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 export default function Contact() {
   const [sent, setSent] = useState(false);
   const [load, setLoad] = useState(false);
+  const [error, setError] = useState('');
   async function submit(e) {
     e.preventDefault();
     setLoad(true);
-    const fd = new FormData(e.target);
-    const body = Object.fromEntries(fd);
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-    setLoad(false);
-    setSent(true);
+    setError('');
+    const form = e.currentTarget;
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      if (!response.ok) throw new Error('Contact request failed.');
+      setSent(true);
+      form.reset();
+    } catch {
+      setError('We could not send your inquiry. Please try again or contact us by phone.');
+    } finally {
+      setLoad(false);
+    }
   }
   return (
     <main className="bg-ink-950">
@@ -113,6 +121,11 @@ export default function Contact() {
                 placeholder="Message: load, location, monthly bill…"
                 className="sm:col-span-2 border border-slate-200 rounded-xl px-4 py-3.5 text-sm bg-slate-50"
               />
+              {error && (
+                <p role="alert" className="sm:col-span-2 text-sm text-red-600">
+                  {error}
+                </p>
+              )}
               <button disabled={load} className="sm:col-span-2 btn-dark !bg-ink-950 w-full">
                 {load ? 'Sending…' : 'Send Inquiry'}
                 <Send size={16} />

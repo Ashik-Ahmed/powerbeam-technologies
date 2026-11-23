@@ -5,15 +5,27 @@ import { IMG } from '@/lib/products';
 import { Handshake, Store, Truck, BadgePercent } from 'lucide-react';
 export default function Partner() {
   const [sent, setSent] = useState(false);
+  const [load, setLoad] = useState(false);
+  const [error, setError] = useState('');
   async function submit(e) {
     e.preventDefault();
-    const fd = new FormData(e.target);
-    await fetch('/api/partner', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(Object.fromEntries(fd)),
-    });
-    setSent(true);
+    setLoad(true);
+    setError('');
+    const form = e.currentTarget;
+    try {
+      const response = await fetch('/api/partner', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      if (!response.ok) throw new Error('Partner request failed.');
+      setSent(true);
+      form.reset();
+    } catch {
+      setError('We could not send your application. Please try again or contact us by phone.');
+    } finally {
+      setLoad(false);
+    }
   }
   return (
     <main className="bg-ink-950">
@@ -102,7 +114,14 @@ export default function Partner() {
                 placeholder="Experience, monthly volume…"
                 className="border rounded-xl px-4 py-3 text-sm bg-slate-50"
               />
-              <button className="btn-dark w-full">Submit Application</button>
+              {error && (
+                <p role="alert" className="text-sm text-red-600">
+                  {error}
+                </p>
+              )}
+              <button disabled={load} className="btn-dark w-full disabled:opacity-60">
+                {load ? 'Sending…' : 'Submit Application'}
+              </button>
             </form>
           )}
         </div>

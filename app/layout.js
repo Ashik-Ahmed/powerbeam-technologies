@@ -50,7 +50,7 @@ export const metadata = {
       'Reliable solar inverters, ESS & batteries. Residential, commercial & industrial solutions.',
     images: [
       {
-        url: `${SITE_URL}/social-preview.svg`,
+        url: `${SITE_URL}/images/social_preview.jpg`,
         width: 1200,
         height: 630,
         alt: 'Powerbeam Technologies social preview',
@@ -61,7 +61,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Powerbeam Technologies Bangladesh',
     description: 'Reliable solar inverters & batteries.',
-    images: [`${SITE_URL}/social-preview.svg`],
+    images: [`${SITE_URL}/images/social_preview.jpg`],
   },
   verification: { google: 'google-site-verification-code' },
   category: 'Solar Energy',

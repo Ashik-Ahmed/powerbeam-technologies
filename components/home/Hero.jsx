@@ -122,7 +122,7 @@ export default function Hero() {
               className="object-cover h-[560px] w-full"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-transparent to-transparent" />
-            <div className="absolute bottom-5 inset-x-5 glass-dark rounded-2xl p-4 flex items-center justify-between">
+            {/* <div className="absolute bottom-5 inset-x-5 glass-dark rounded-2xl p-4 flex items-center justify-between">
               <div>
                 <p className="text-xs text-volt-400 font-bold flex items-center gap-1">
                   <span className="w-2 h-2 bg-volt-500 rounded-full animate-pulse" />
@@ -133,7 +133,7 @@ export default function Hero() {
                 </p>
               </div>
               <Sun className="text-solar-500 animate-spinSlow" size={36} />
-            </div>
+            </div> */}
           </div>
           <motion.div
             animate={{ y: [0, -12, 0] }}
