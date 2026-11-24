@@ -19,7 +19,7 @@ const body = Inter({
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Powerbeam Technologies | Best Solar Inverter & Battery Supplier in Bangladesh',
+    default: 'Powerbeam Technologies | Smart Energy for a Smarter Future',
     template: '%s | Powerbeam Technologies Bangladesh',
   },
   description:
@@ -45,7 +45,7 @@ export const metadata = {
     locale: 'en_BD',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Powerbeam Technologies | Powering a Sustainable Future in Bangladesh',
+    title: 'Powerbeam Technologies | Smart Energy for a Smarter Future',
     description:
       'Reliable solar inverters, ESS & batteries. Residential, commercial & industrial solutions.',
     images: [

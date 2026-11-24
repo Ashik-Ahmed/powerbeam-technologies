@@ -36,7 +36,7 @@ const svg = `
   <image href="data:image/png;base64,${logo.toString('base64')}" x="120" y="135" width="365" height="180" preserveAspectRatio="xMidYMid meet"/>
 
   <text x="590" y="245" fill="#f8fafc" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="700">Powerbeam Technologies</text>
-  <text x="590" y="305" fill="#b9c8d8" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="500">Powering a Sustainable Future in Bangladesh</text>
+  <text x="590" y="305" fill="#b9c8d8" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="500">Smart Energy for a Smarter Future</text>
 
   <g>
     <rect x="590" y="345" width="210" height="42" rx="21" fill="rgba(56,189,248,0.10)" stroke="rgba(56,189,248,0.30)"/>
