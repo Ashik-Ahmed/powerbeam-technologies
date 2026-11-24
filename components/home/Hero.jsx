@@ -145,7 +145,7 @@ export default function Hero() {
             </span>
             <div>
               <p className="text-sm font-bold">Up to 99% Efficiency</p>
-              <p className="text-xs text-white/50">Volmore On-Grid</p>
+              <p className="text-xs text-white/50">Voltmore On-Grid</p>
             </div>
           </motion.div>
           <motion.div
@@ -171,7 +171,7 @@ export default function Hero() {
               'ARCEUS 6.5KW',
               'NOVA 12.6KW',
               'ELEGO OYSTER IP66',
-              'VOLMORE 350KW',
+              'VOLTMORE 350KW',
               'NURA ESS',
               'CMLB LiFePO4',
               'SOLAR PUMP 200KW',

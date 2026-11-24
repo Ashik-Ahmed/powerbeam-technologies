@@ -5,7 +5,7 @@ Next.js 15 App Router • Tailwind • Framer Motion • SEO BD
 - Run: npm install && npm run dev
 - Place catalog PDF at /public/catalog/powerbeam-crown-micro-catalog.pdf
 - Replace Unsplash with real product shoots in /public/images/products for higher conversion
-- Update google verification in layout.js, deploy on Vercel with domain powerbeam.com.bd
+- Update google verification in layout.js, deploy on Vercel with domain www.powerbeambd.com
 
 ## Website inquiry email
 

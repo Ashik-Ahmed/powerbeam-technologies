@@ -48,7 +48,7 @@ const svg = `
     <text x="838" y="373" fill="#99f6e4" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">BESS</text>
   </g>
 
-  <text x="590" y="465" fill="#f8fafc" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="700">powerbeam.com.bd</text>
+  <text x="590" y="465" fill="#f8fafc" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="700">powerbeambd.com</text>
   <text x="890" y="465" fill="#2dd4bf" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700">TRUSTED SOLAR PARTNER</text>
 </svg>
 `;
